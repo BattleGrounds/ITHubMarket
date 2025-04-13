@@ -39,8 +39,8 @@
 ## 🎮 Как запустить?  
 **Шаг 1️⃣**: Клонируй репозиторий  
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/BattleGrounds/ITHubMarket.git
+cd ITHubMarket
 ```
 
 **Шаг 2️⃣**: Запусти бэкенд (из папки `backend`)  
