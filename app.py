@@ -2,9 +2,14 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 import time
 import random
+import os
 
 app = Flask(__name__)
 CORS(app)
+
+# Определяем порт и хост
+port = int(os.environ.get("PORT", 5000))  # Используем PORT из переменных окружения, если он не установлен, используем 5000
+host = os.environ.get("HOST", "0.0.0.0")  # Используем HOST из переменных окружения, если он не установлен, используем 0.0.0.0
 
 # Генерация 1 тысячи товаров при запуске сервера
 products = [
@@ -66,3 +71,6 @@ def sort_products ():
         'page': page,
         'per_page': per_page
     })
+
+if __name__ == '__main__':
+    app.run(host=host, port=port)
