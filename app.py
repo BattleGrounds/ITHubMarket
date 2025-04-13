@@ -38,8 +38,8 @@ def bubble_sort(arr, key):
 @app.route('/api/sort', methods=['POST'])
 def sort_products ():
     data = request.json
-    key = data['key']
-    reverse = data['reverse']
+    key = data['sortType']
+    reverse = True if data['sortOrder'] == 'asc' else False
     algorithm = data['algorithm']
     page = data.get('page', 1)
     per_page = data.get('per_page', 50)
