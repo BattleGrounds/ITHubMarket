@@ -53,7 +53,7 @@ def sort_products ():
 
     if algorithm == 'builtin':
         sorted_arr = sorted(arr, key=lambda x: x[key], reverse=reverse)
-    elif algorithm == 'custom':
+    elif algorithm == 'bubble':
         sorted_arr = bubble_sort(arr, key)
         if reverse:
             sorted_arr.reverse()
