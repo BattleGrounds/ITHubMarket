@@ -46,9 +46,11 @@ def sort_products ():
     
     # Создаем копию для сортировки
     arr = products.copy()
-    
+
+    sorted_arr = []
+
     start_time = time.time()
-    
+
     if algorithm == 'builtin':
         sorted_arr = sorted(arr, key=lambda x: x[key], reverse=reverse)
     elif algorithm == 'custom':

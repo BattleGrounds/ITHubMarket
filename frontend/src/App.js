@@ -68,7 +68,6 @@ function App() {
         <select value={algorithm} onChange={handleAlgorithmChange}>
           <option value="builtin">Встроенная сортировка</option>
           <option value="bubble">Пузырьковая сортировка</option>
-          <option value="tim">TimSort</option>
         </select>
         <button onClick={fetchData}>Сортировать</button>
       </div>
