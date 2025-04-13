@@ -5,7 +5,7 @@ import random
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": "https://it-hub-market.vercel.app"})
 
 # Определяем порт и хост
 port = int(os.environ.get("PORT", 5000))  # Используем PORT из переменных окружения, если он не установлен, используем 5000
